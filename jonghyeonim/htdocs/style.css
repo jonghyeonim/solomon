@@ -9,24 +9,34 @@ body.black{
 header{
   border-bottom:1px solid gray;
   padding:20px;
+  font-family: 'Lucida Grande', Tahoma, Arial, Helvetica, sans-serif;
 }
 nav {
   border-right:1px solid gray;
   width:200px;
   height:600px;
   float:left;
+  font-family: 'Lucida Grande', Tahoma, Arial, Helvetica, sans-serif;
 }
 nav ol{
   list-style:none;
+  font-family: 'Lucida Grande', Tahoma, Arial, Helvetica, sans-serif;
 }
 article{
   float:left;
   padding:20px;
+  font-size: 12px;
+  font-family: 'Lucida Grande', Tahoma, Arial, Helvetica, sans-serif;
 }
 h2{
-  font-size:50px;
-}
+  font-size:20px;
+  font-family: 'Lucida Grande', Tahoma, Arial, Helvetica, sans-serif;
 
+}
+header img{
+  float: right;
+  height: 100px;
+}
 #control{
-  float: right
+  float: right;
 }
