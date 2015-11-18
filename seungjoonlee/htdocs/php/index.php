@@ -31,7 +31,7 @@ while($row = mysqli_fetch_assoc($result)) { //associative array, map이랑 비�
 	<!-- <div class="container-fluid"> -->
 		<header class="jumbotron text-center"> <!-- 헤더를 나타내는 태그 -->
 			<img id="logo" class="img-circle" src="https://s3-ap-northeast-1.amazonaws.com/opentutorialsfile/course/94.png" alt="생활코딩">
-			<h1><a href="index.php">JavaScript</a></h1> <!-- 제목을 나타내는 태그 h1 ~ h6 -->
+			<h2><a href="index.php">생활코딩 웹 강의</a></h2> <!-- 제목을 나타내는 태그 h1 ~ h6 -->
 		</header>
 		<div class="row">
 			<nav class="col-md-3"> <!-- 네비게이션을 나타내는 태그 -->
@@ -44,7 +44,7 @@ while($row = mysqli_fetch_assoc($result)) { //associative array, map이랑 비�
 				</ol>
 			</nav>
 			<div class ="col-md-9">
-				<article>
+				<article> 	 
 					<?php 
 					if(!empty($_GET['id'])) {
 						//file_get_contents($_GET['id].".txt");
