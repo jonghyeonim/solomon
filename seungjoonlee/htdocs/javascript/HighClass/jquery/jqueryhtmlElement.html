@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+	<li>HTML</li>
+	<li>CSS</li>
+	<li id="active">JavaScript</li>
+	</ul>
+	<script type="text/javascript">
+	var li = document.getElementById('active');
+	console.log(li.constructor.name); // HTML li ELEMENT
+	var lis = document.getElementsByTagName('li');
+	console.log(lis.constructor.name); // HTML Collection
+	</script>
+</body>
+</html>

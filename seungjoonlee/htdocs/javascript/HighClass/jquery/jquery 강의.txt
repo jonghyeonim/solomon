@@ -1,0 +1,13 @@
+$('li').css('color','red');
+-> <li style="color:red">
+-> var lis = documnet.getElementsByTagName('li');
+for( var i=0; i<lis.length; i++)
+	lis[i].style.color = red;
+
+$() -> jquery function -> 객체를 리턴함 (JQuery 객체) css는 JQuery 객체의 프로퍼티
+()안에는 css 선택자
+
+DOM Tree url 주소 : http://web.stanford.edu/class/cs98si/slides/the-document-object-model.html
+
+HTMLElement : html 엘리먼트
+HTMLCollection : html 엘리먼트 배열?
