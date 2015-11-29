@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <input type="button" value="open" onclick="winopen();" />
+    <input type="text" onkeypress="winmessage(this.value)" />
+    <!--onkeypress 이벤트는 에딧텍스트에 값이 입력될 때 마다 호출됨.-->
+    <input type="button" value="close" onclick="winclose()" />
+    <script>
+    function winopen(){
+        win = window.open('windowcommunication2.html', 'ot', 'width=300px, height=500px');
+    }
+    function winmessage(msg){
+        win.document.getElementById('message').innerText=msg;
+    }
+    function winclose(){
+        win.close();
+    }
+    </script>
+    <!-- 스크립트 안에서 window.open을 하면 브라우저가 팝업을 차단하게 됨. 위에서 처럼 함수에서 호출하게 되면 팝업 차단이 뜨지 않음. 왜 그렇지.. 신기하네 
+    <script>window.open('windowcommunication2.html')</script>
+    -->
+</body>
+</html>

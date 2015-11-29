@@ -24,3 +24,30 @@ window(전역 객체) -> DOM(document) : 각종 html 태그들을 제어할 수 있는 객체
 		  -> BOM-Browser object model(navigator, screen ...) : 브라우저의 기능들(URL, 경고)을 제어할 수 있는 객체
 		  -> javaScriptCore(Object, Array, Function ....)
 
+alert : 경고창 같은거
+confirm : 경고창에 예, 아니오 있는거
+prompt : 경고창에 입력창 있는거
+location : 현재 웹페이지 속성이 담겨 있는 객체, url, protocol, pathname 등등
+  ex) location = '주소'; 하면 해당 페이지로 넘어감.
+
+egoing blog 주소 : http://egoing.net
+
+navigator : 브라우저의 정보를 알 수 있는 객체
+
+w3c : 국제 표준화 기구
+ecma : 자바스크립트 표준화 기구
+각 표준화 기구에서 브라우저 특성에 맞춰 코드를 만들어냄
+크로스 브라우징 문제 : 각 브라우저마다 동작이 다르게 발생할 수 있는 문제 이러한 문제를 navigator객체로 해결한다고 함.
+netscape에서 자바스크립트를 만들었다고 함.
+
+console.log(location), console.dir(navigator)로 프로퍼티를 확인할 수 있음.
+
+window.open으로 html a태그와 같이 동작할 수 있음. 새로운 창을 띄움.
+
+getElementByTagName
+getElementByClass
+getElementById
+querySelector
+해당 태그, 클래스, 아이디와 연결되는 엘리먼트들을 가지고올 수 있음.
+
+JQuery : JavaScript를 효율적으로 사용할 수 있도록 해주는 라이브러리
