@@ -1,0 +1,121 @@
+javascript event : onclick과 같은 이벤트들.
+html input 태그에서 onclick="~~~~" 에서 ~~~~는 javascript 코드임.
+
+ex) 	button -> onclick
+	text -> onchange
+
+*이벤트 등록 방법 3가지
+1. inline 방식
+ex) <input type="button" onclick="alert('Hello World')" value="button"/>
+
+2. 프로퍼티 리스너
+ex) 	
+<input type="button" id="target" value="button" />
+<script>
+	var t = document.getElementById('target');
+	t.onclick = function(event) {
+		alert('Hello world');
+		var event = event || window.event; // event가 있으면 함수로 넘어온 event를 사용하고 없으면 전역객체인 window의 event를 사용한다 // 크로스브라우징 문제
+	}
+</script>
+ - event 객체 : event 객체를 통해 해당 event의 정보를 확인하고 사용할 수 있음.
+
+3. addEventListner 방식
+가장 권장되는 방식
+ex)
+<input type="button" id="target" value="button"/>
+<script>
+var t = document.getElementById("target");
+if(t.addEventListener){
+	t.addEventListenner('click', function(event) {
+		alert('Hello world'+event.target.value);
+	});
+} else if(t.attachEvent){ // 크로스 브라우징 문제
+	t.attachEvent('onclick', function(event) {
+		alert('Hello world'+event.target.value);
+	});
+}
+</script>
+
+// 하나의 이벤트 함수로 여러곳에 등록이 가능함.
+<input type="button" id="target1" value="button1" />
+<input type="button" id="target2" value="button2" />
+<script>
+    var t1 = document.getElementById('target1');
+    var t2 = document.getElementById('target2');
+    function btn_listener(event){
+        switch(event.target.id){
+            case 'target1':
+                alert(1);
+                break;
+            case 'target2':
+                alert(2);
+                break;
+        }
+    }
+    t1.addEventListener('click', btn_listener);
+    t2.addEventListener('click', btn_listener);
+</script>
+
+*이벤트 전파(버블링과 캡처링)
+캡처링 : 중첩된 html 태그에서 각각의 태그에 이벤트를 등록하면 각 태그들이 모두 이벤트 대상이 되므로 최상위 부모부터 차례대로 이벤트가 발생하는 것.(부모->자식)
+버블링 : 캡처링과 반대로 최하위 태그부터 최상위 부모 태그까지 이벤트가 역순으로 발생하는 것.(자식->부모)
+
+document.getElementById('target').addEventListener('click', handler, false);
+// 3번째 아규먼트가 true이면 캡처링 false면 버블링, 버블링을 더 많이 사용한다고 함. 자식에서부터 부모로 호출되기 때문에 이벤트 전파를 중간에 가로막을 수도 있다고 함.
+
+*이벤트타입
+1.폼
+이벤트 종류 : submit(버튼클릭할때). change(값이변할때), blur(선택됐다가 해제될때), focus(선택될때)
+<form id="target" action="result.html">
+	<label for="name">name</label> <input id="name" type"name" />
+	<input type="submit"/>
+</form>
+var t = document.getElementById('target');
+t.addEventListener('submit', function(event){
+    if(document.getElementById('name').value.length === 0){
+        alert('Name 필드의 값이 누락 되었습니다');
+        event.preventDefault();
+    }
+});
+</script>
+
+2. 문서로딩(필요할 때 들어야지)
+3. 마우스(필요할 때 들어야지)
+
+*JQuery에서 이벤트 등록
+<input type="button" id="pure" value="pure" />
+<input type="button" id="jquery" value="jQuery" />
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+    // 순수하게 구현했을 때
+    var target = document.getElementById('pure');
+    if(target.addEventListener){
+        target.addEventListener('click', function(event){
+            alert('pure');
+        });
+    } else {
+        target.attachEvent('onclick', function(event){
+            alert('pure');
+        });
+    }
+ 
+    // jQuery를 사용했을 때
+    $('#jquery').on('click', function(event){
+        alert('jQuery');
+    })
+</script>
+-> 촙나 쉽게 되네 -_- 백날 JavaScript 배워봤자 다 헛수고네 ㅋㅋㅋ
+
+*Ajax
+XMLHttpRequest로 php를 호출함.
+그래서 서버에서 던져준 php에 담긴 데이터를 html에 태그에 데이터를 씌움.
+이때 아마 JSON으로 데이터를 보내주면 알아서 파싱해서 보여주면 될 듯.
+http protocol 이라서 get, post 2가지 방식으로 http request가 가능한듯.
+
+HTTP 전송방식
+- GET : url뒤에 속성과 값을 넣어서 전달함.
+- POST : form을 이용해서 submit 하는 방식으로 전달함. 일반적으로 get은 데이터 제한이 있기 때문에 큰데이터를 전달할 때는 post를 사용함.
+-> 작은 데이터를 사용할 때 GET과 POST의 사용에 혼동이 올 수 있음
+-> 일반적으로 get은 가져오는 것이고 post는 수행하는 것이다. get은 select적인 성향이 있고 post는 서버 db에 데이터를 변경 수정할 때 사용한다.
+-> get은 url을 포함하고 있고 post는 url을 포함하고 있지 않다.
