@@ -119,3 +119,21 @@ HTTP 전송방식
 -> 작은 데이터를 사용할 때 GET과 POST의 사용에 혼동이 올 수 있음
 -> 일반적으로 get은 가져오는 것이고 post는 수행하는 것이다. get은 select적인 성향이 있고 post는 서버 db에 데이터를 변경 수정할 때 사용한다.
 -> get은 url을 포함하고 있고 post는 url을 포함하고 있지 않다.
+
+*JSON (JavaScript Object Notataion) : JavaScript에서 객체를 만들 때 사용하는 표현식
+- SublimeText의 Preference의 설정값이 JSON으로 되어 있음.
+ex) JSON 표현식
+{
+	"font_face": "Inconsolata",
+	"font_size": 30,
+	"ignored_packages" : [];
+	"line_numbers": false
+}
+- JSON.parse() : 인자로 전달된 JSON String을 JSON Object으로 변환.
+- JSON.stringify() : 인자로 전달된 JSON Object를 JSON String으로 변환.
+
+- JSON 홈페이지 : http://www.json.org/json-ko.html
+
+*JQuery Ajax
+- JQuery Ajax API 홈페이지 : http://api.jquery.com/category/ajax/
+$.ajax 객체
