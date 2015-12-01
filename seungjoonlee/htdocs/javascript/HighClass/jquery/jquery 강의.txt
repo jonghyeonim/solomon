@@ -9,5 +9,15 @@ $() -> jquery function -> 객체를 리턴함 (JQuery 객체) css는 JQuery 객�
 
 DOM Tree url 주소 : http://web.stanford.edu/class/cs98si/slides/the-document-object-model.html
 
-HTMLElement : html 엘리먼트
+Element : HTMLElement의 부모 클래스
+		  각종 markup Language 를 제어하기 위한 객체
+HTMLElement : html 엘리먼트 (HTMLLIElement의 부모 클래스)
 HTMLCollection : html 엘리먼트 배열?
+
+JQuery 객체 : $()함수가 리턴하는 객체 타입.
+JQuery를 통해 반복적인 작업을 하는 코드를 암묵적으로 가릴 수 있음. (-> 체이닝)
+
+JQuery API reference 주소 : https://api.jquery.com
+
+markup Language : HTML, XML, SVG, XVL 등등 ex) <html></html> 이런거?
+DOM은 markupLanguage를 제어하기 위한 객체
