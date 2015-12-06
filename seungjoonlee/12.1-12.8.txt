@@ -1,0 +1,71 @@
+11:26 18:30 12:10 5:36 5:17 2:42 8:22 9:52 7:05 7:01 1:38 5:48
+0:48 4:05 13:05 3:33 3:45 -> 120분
+
+테이블명 : favorite
+속성 : 제목, 아티스트, 길이, 앨범
+
+SELECT * FROM favorite // DB 출력
+INSERT INTO favorite VALUES('꿀', '조용필', '4:47', 'The Dreams'); // DB 입력
+
+데이터베이스 : 데이터의 저장소
+데이터베이스의 종류 : 
+*관계형 데이터베이스(RDB) : mysql, oracle, mssql
+ - 관계형 데이터베이스는 데이터를 제어하기 위한 언어인 SQL을 사용함.
+*NoSQL : MongoDB
+ - 데이터의 양이 증가하면서 큰 데이터를 관리하기 위한 데이터베이스 시스템
+
+데이터베이스 서버 > 데이터베이스 > 테이블
+
+APMSetup, Bitnami : 웹서버 설치 프로그램
+
+**데이터관리 - SQL
+http://cse.unl.edu/~sscott/ShowFiles/SQL/CheatSheet/SQLCheatSheet.html
+
+데이터베이스 만들기 : CREATE DATABASE `데이터베이스 이름` CHARACTER SET utf8 COLLATE utf8_general_ci;
+데이터베이스 지우기 : DROP DATABASE `데이터베이스 이름`
+데이터베이스 보기 : show databases;
+데이터베이스 선택 : use 데이터베이스 이름;
+
+스키마 : 테이블에 적재될 데이터의 구조와 형식을 정의하는 것.
+ -> 컬럼의 이름을 정한다거나 컬럼에 오는 데이틔 형식은 어떠한 것인지 데이터가 꼭 들와야되는지 아닌지 데이터를 설계하는 것.
+
+테이블 생성 : CREATE TABLE 테이블 이름 {
+	칼럼명 data_type,
+	칼럼명 data_type,
+}
+ex) CREATE TABLE `student` (
+    `id`  tinyint NOT NULL ,
+    `name`  char(4) NOT NULL ,
+    `sex`  enum('남자','여자') NOT NULL ,
+    `address`  varchar(50) NOT NULL ,
+    `birthday`  datetime NOT NULL ,
+    PRIMARY KEY (`id`)
+);
+desc 테이블 이름 : 테이블의 스키마를 확인하는 명령어
+
+char과 varchar 비교
+ - char : 고정적인 크기, 하지만 searching이 빠름.
+ - varchar : 가변적인 크기, 용량적인 측면에서 char보다 효율적.
+
+데이터 삽입 :
+ - INSERT INTO `student` (`id` ,`name`, `sex`, `address`) VALUES('1', 'egoing', '남자', 'se'); -> 속성을 명시해주는 것이 더 효율적이다고 함.
+ - INSERT INTO `student` VALUES('1', 'egoing', '남자', 'se', '2000-11-11');
+
+데이터 변경 : 
+ - UPDATE `student` SET address='서울'; -> address를 모두 서울로
+
+데이터 삭제 : 
+ - DELETE FROM 테이블명 WHERE 조건;
+ - TRUNCATE : 테이블에 외부키가 없다면 DELETE보다 훨씬 빠르게 삭제됨, 테이블의 모든 데이터를 삭제함. -> TRUNCATE student;
+ - DROP 테이블 이름 : 데이터베이스에서 테이블을 삭제함.
+
+데이터 조회 : 
+ - SELECT * FROM 테이블명
+ - SELECT name, birthday FROM 테이블명
+ - SELECT * FROM `테이블명` where sex='남자' AND address='서울';
+ - SELECT * FROM `테이블명` LIMIT 1; -> 하나만 가져옴
+ - SELECT * FROM `테이블명` LIMIT 1(offset),1; -> 1번째 행부터 1개 가져옴.
+
+그룹핑 : 
+ - select sex from student group by sex; 해당 속성의 데이터를 묶어서 값을 추출해냄. sex가 '남성' '여성'의 enum 타입이라서 결과값은 남자 여자로 나올 것임.
+ - select sex,sum(distance), avg(distance) from student group by sex; -> sex로 그룹핑하여 남자의 distance 속성의 총합과 평균값을 출력하고 여자의 distance 속성의 총합과 평균값을 출력함.
