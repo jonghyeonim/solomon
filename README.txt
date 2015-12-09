@@ -2,3 +2,4 @@
 
 1. should study Git commands
 2. make individual directory(dirname="jonghyeonim") and work in the directory
+3. this is for the test

@@ -14,19 +14,20 @@ from PyQt4 import QtGui, QtCore, QtGui
 class Probabilistic(QtGui.QWidget):
     def __init__(self):
         super(Probabilistic, self).__init__()
-        
+
         self.setupUi()
         self.show()
 
     def setupUi(self):
         #self.setObjectName("Form")
-        font = QtGui.QFont("Consolas")
-        self.setFont(font)
+        font = QtGui.QFont()
+        font.setPointSize(25)
 
         self.resize(878, 544)
         self.label_Model = QtGui.QLabel(self)
         self.label_Model.setGeometry(QtCore.QRect(20, 10, 211, 31))
         self.label_Model.setObjectName("label_Model")
+        self.label_Model.setFont(font)
         self.groupModel = QtGui.QGroupBox(self)
         self.groupModel.setGeometry(QtCore.QRect(20, 50, 151, 71))
         self.groupModel.setObjectName("groupModel")
@@ -140,7 +141,7 @@ class Probabilistic(QtGui.QWidget):
         #QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self):
-       
+
         self.label_Model.setText("Probabilistic Model")
         self.groupModel.setTitle("Model")
         self.rb_EOI.setText("EOI")
@@ -149,11 +150,11 @@ class Probabilistic(QtGui.QWidget):
         self.label_2.setText("Item cost(C)")
         self.label_3.setText("Holding cost(H):")
         self.label_4.setText("Order cost(A):")
-        self.label_5.setText("%of Time:")
-        self.label_6.setText("%of Demand:")
+        self.label_5.setText("% of Time:")
+        self.label_6.setText("% of Demand:")
         self.label_8.setText("$ unit")
-        self.label_9.setText("$/item year")
-        self.label_10.setText("$/order")
+        self.label_9.setText("$ / item year")
+        self.label_10.setText("$ / order")
         self.label_11.setText("%")
         self.label_12.setText("%")
         self.groupShortage.setTitle("Shortage")
@@ -161,10 +162,10 @@ class Probabilistic(QtGui.QWidget):
         self.rb_notallowed.setText("known")
         self.groupFunction.setTitle("Function")
         self.btn_Model.setText("Deterministic Model")
-        self.btn_Optimization.setText("최적화")
-        self.btn_Clear.setText("초기화")
-        self.btn_Close.setText("종료")
+        self.btn_Optimization.setText("Optimization")
+        self.btn_Clear.setText("Clear")
+        self.btn_Close.setText("Exit")
         self.groupOutput.setTitle("Output")
-        self.groupShortage_2.setTitle("Time/Demand")
-        self.rb_allowed_2.setText("%of Time")
-        self.rb_notallowed_2.setText("%of Demand")
+        self.groupShortage_2.setTitle("Time / Demand")
+        self.rb_allowed_2.setText("% of Time")
+        self.rb_notallowed_2.setText("% of Demand")
