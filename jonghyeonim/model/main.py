@@ -1,7 +1,4 @@
-
-import sip
 import sys
-import math
 
 from PyQt4 import QtGui, QtCore, QtGui
 from PyQt4.QtCore import QTimeLine
@@ -57,26 +54,29 @@ class StackedWidget(QStackedWidget):
     def setPage2(self):
         self.setCurrentIndex(1)
 
+
 def main():
-	app = QApplication(sys.argv)
-	window = QWidget()
-	window.resize(878, 544)
-	widget1 = Deterministic()
-	widget2 = Probabilistic()
+    app = QApplication(sys.argv)
+    window = QWidget()
+    window.resize(878, 595)
+    window.setWindowTitle("Deterministic/Probabilistic Model")
 
-	stack = StackedWidget()
-	stack.addWidget(widget1)
-	stack.addWidget(widget2)
+    widget1=Deterministic()
+    widget2=Probabilistic()
 
-	widget1.btn_Model.clicked.connect(stack.setPage2)
-	widget2.btn_Model.clicked.connect(stack.setPage1)
+    stack = StackedWidget()
+    stack.addWidget(widget1)
+    stack.addWidget(widget2)
 
-	layout = QGridLayout(window)
-	layout.addWidget(stack, 0, 0, 1, 2)
+    widget1.btn_Model.clicked.connect(stack.setPage2)
+    widget2.btn_Model.clicked.connect(stack.setPage1)
 
-	window.show()
+    layout = QGridLayout(window)
+    layout.addWidget(stack, 0, 0, 1, 2)
 
-	sys.exit(app.exec_())
+    window.show()
+
+    sys.exit(app.exec_())
 
 if __name__ == '__main__':
 	main()
