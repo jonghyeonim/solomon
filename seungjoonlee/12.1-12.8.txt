@@ -69,3 +69,51 @@ char과 varchar 비교
 그룹핑 : 
  - select sex from student group by sex; 해당 속성의 데이터를 묶어서 값을 추출해냄. sex가 '남성' '여성'의 enum 타입이라서 결과값은 남자 여자로 나올 것임.
  - select sex,sum(distance), avg(distance) from student group by sex; -> sex로 그룹핑하여 남자의 distance 속성의 총합과 평균값을 출력하고 여자의 distance 속성의 총합과 평균값을 출력함.
+
+3:30 1:10 15:56 17:28 13:11 4:30 8:08 // 64분
+18:44 4:59 // 24분
+
+정렬(order) :
+ex) select * from student order by distance desc;
+ex) select * from student order by distance desc, address asc;
+ -> distance로 정렬하고 같은 값이 있을때 address로 정렬(복합정렬)
+
+색인(index) : ex) 해당 단어가 어디에 위치하는지 적혀 있는 거?
+ - 데이터가 엄청 많거나 데이터베이스의 성능이 좋아야 하는 경우 혹은 어떤 쿼리가 오래 걸릴 경우 사용하게 됨.
+*인덱스의 종류
+ - primary key : 데이터의 중복 x, 테이블에서 하나의 속성에 설정가능. 속도 빠름
+ - unique key : 데이터의 중복 x, 테이블에서 여러개의 unique key 설정 가능. 속도 빠름
+ - normal key : 데이터의 중복 가능. primary key, unique key보다 느림.
+ - full text : 자연어 검색, myisam에서만 지원
+ex)SELECT introduction, MATCH(introduction) AGAINST('영문과에') FROM student WHERE MATCH (introduction) AGAINST('영문과에');
+ -> 전문검색엔진으로 lucene, sphinx 오픈소스 무료 좋데.
+ - 중복키 : 2가지의 속성을 하나의 키로 묶어버림.
+*색인을 정의 하는 방법
+ - 자주 조회되는 칼럼
+ - 조회 시 오랜시간을 소모하는 칼럼
+ - 데이터가 긴 경우 인덱스를 사용하지 않는다. 용량을 많이 차지하게 된다고 함. 효율적이지 못함. url을 저장하고 그거를 해쉬로 검색하는 방법을 사용한다고 함.
+
+JOIN : 데이터를 분할하고 관계성을 부여하고 난뒤 데이터를 조회할 때 쓰는 방법.
+ - LEFT JOIN : 가장 많이 사용됨.
+ ex) SELECT s.name, s.location_id, l.name AS address, l.distance  FROM student AS s LEFT JOIN location AS l ON s.location_id = l.id;
+ - INNER JOIN : 조인하는 테이블에 데이터가 없으면 NULL로 표시하는게 아니라 제외해버림.
+ - OUTER JOIN : 
+
+사용자 권한 : 사용자에 따라사 접근할 수 있는 데이터와 사용할 수 있는 기능을 제한.
+ - GRANT 기능(ALL, CREATE, DELETE, INSERT, SELECT) ON 데이터베이스이름.테이블이름 TO `유저아이디`@`IP`('%' 는 모든 IP 허용) IDENTIFIED BY '비밀번호'
+ - SHOW GRANTS : 자기 자신의 권한
+ - SHOW GRANTS FOR dev : dev 사용자의 권한
+ - REVOKE DELETE on 데이터베이스이름.테이블이름 from dev;
+   -> dev의 delete 기능을 삭제. revoke는 기능을 삭제하는 명령어.
+ - DROP USER `dev`@`%` : dev 유저의 권한을 모두 삭제.
+
+2:50 5:38 24:41
+
+*HTML 수업
+ - w3c : html에 대한 규칙을 지정하는 국제기구( www.w3.org )
+ - <!DOCTYPE html> -> html5 형식이란 표시
+ - head 태그의 경우 데이터보단 메타데이터가 들어감
+ - body 태그에 데이터가 들어감.
+
+*PHP 수업
+ - 정적인 언어 html을 어떻게 동적으로 표현할 것인가에서 PHP가 나옴
