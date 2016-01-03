@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a5eca44a-094b-4d0e-8afd-50b2f314da2e" name="GAPU-MGMT" url="http://goqual.com">
+        <fileTransfer host="goqual.com" port="22" rootFolder="/home/hosting_users/goqualweb/www/MGMT" accessType="SFTP" password="dfcddfc5dfdbdfdfdfcbdfc6df9bdf98df8bdfea" username="goqualweb">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

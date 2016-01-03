@@ -1,0 +1,30 @@
+/* mobile */
+@media only screen and (max-width: 480px){
+
+}
+
+/* tablet */
+@media only screen and (max-width: 768px){
+
+}
+
+/* web */
+@media only screen and (min-width: 769px) {
+    .gq-navbar-menu > li, .gq-navbar-menu-right > li, .gq-navbar-menu > li > a, .gq-navbar-menu-right > li > a, .navbar-brand {
+        height: 80px;
+        line-height: 80px;
+        vertical-align: middle;
+        padding: 0px 5px 0px 5px !important;
+        color: rgb(34, 34, 34) !important;
+    }
+}
+
+a:hover {
+    cursor: pointer;
+}
+.sg-item-delete {
+    color: #CB2026;
+}
+.sg-item-content {
+    margin-top: 7px;
+}
