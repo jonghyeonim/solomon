@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a0dbca37-3825-4735-b7bf-54d120f6c026" name="GAPU" url="http://gapugames.com">
+        <fileTransfer host="gapugames.com" port="22" rootFolder="/home/hosting_users/gapugames/www/GAPU" accessType="SFTP" password="dfcddfcbdfdadfdfdfeadf9bdf98df98df9c" username="gapugames">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

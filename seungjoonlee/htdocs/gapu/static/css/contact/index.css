@@ -1,0 +1,59 @@
+.gapu-content {
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    padding: 10px;
+    width: 150px;
+    background-color: #413528;
+    border-color: #413528;
+}
+
+.btn:hover, .btn:active, .btn:focus .btn-primary:hover, .btn-primary:active,.btn-primary:focus {
+    background-color: #EC823E;
+    border-color: #EC823E;
+}
+
+#form-mail {
+    margin-top: 60px;
+}
+.form-group input {
+    border: solid 1px #413528;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+}
+
+.form-group textarea {
+    padding: 10px;
+    border: solid 1px #413528;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+}
+
+::-webkit-input-placeholder {
+    color: #ABA9A9;
+}
+:-moz-placeholder {
+    color: #ABA9A9;
+}
+::-moz-placeholder {
+    color: #ABA9A9;
+}
+:-ms-input-placeholder {
+    color: #ABA9A9;
+}
+
+.gapu-content .content-title {
+    font-size: 50px;
+    line-height: 43px;
+    font-weight: 100;
+}
+.gapu-content .content-detail {
+}
+.gapu-content .content-email {
+    margin-top: 80px;
+    font-weight: bold;
+}

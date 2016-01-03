@@ -1,0 +1,43 @@
+.gapu-content {
+    width: 100% !important;
+}
+.gapu-content .about-img {
+    width: 90%;
+}
+.gapu-content .content-about {
+    margin: 0 auto;
+    text-align: left;
+    margin: 40px auto 40px auto;
+    padding: 0 20px;
+}
+.gapu-content .content-about .about-item {
+    border-top: 2px solid #929292;
+    padding-left: 0;
+    padding-right: 0;
+}
+.gapu-content .content-about .about-item .each{
+    padding: 20px;
+    border-bottom: 2px solid #E8E8E8;
+    color: #000;
+}
+.gapu-content .content-about .first-column .each{
+    border-right: 1px solid #333;
+}
+.gapu-content .content-about .about-item .each .title {
+    color: #6F6F6F !important;
+    width: 30%;
+    display: inline-block;
+}
+
+/* 시그니처 */
+.gapu-content .content-about .signiture-container {
+    text-align: left;
+    margin-top: 100px;
+}
+.gapu-content .content-about .signiture-container .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.gapu-content .content-about .signiture-container img {
+    width: 35%;
+}

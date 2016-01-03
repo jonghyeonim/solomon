@@ -1,0 +1,25 @@
+.recruit-item {
+    cursor: pointer;
+}
+.recruit-item .recruit-title {
+    color: #fff;
+    text-align: left;
+    background: #413528;
+    width: 100%;
+    padding: 15px;
+    border-bottom: 1px solid #f7f7f7;
+}
+.recruit-item .recruit-content {
+    display: none;
+    text-align: left;
+    background: #f7f7f7 !important;
+    color: #333;
+    padding: 15px;
+}
+.recruit-item .recruit-content ul {
+    padding-left: 0;
+}
+.ajax-loader {
+    width: 5%;
+    margin-bottom: 40px;
+}

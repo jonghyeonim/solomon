@@ -1,0 +1,19 @@
+.gapu-container .gapu-content .content-title {
+    font-size: 36px;
+    line-height: 43px;
+    font-weight: 100;
+}
+.gapu-container .gapu-content .content-detail {
+    font-size: 11px;
+}
+.gapu-container .gapu-content .content-email {
+    margin-top: 20px;
+    font-weight: bold;
+}
+.gapu-container .gapu-content .content-email span {
+    font-weight: 400 !important;
+}
+.gapu-container .gapu-content .content-map {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}

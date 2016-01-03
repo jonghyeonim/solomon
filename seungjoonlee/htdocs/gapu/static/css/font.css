@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('/static/font/BebasNeue.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Arita-sans-Bold';
+    src: url('/static/font/Arita/sans/AritaSans-Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Arita-sans-Light';
+    src: url('/static/font/Arita/sans/AritaSans-Light.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Arita-sans-Medium';
+    src: url('/static/font/Arita/sans/AritaSans-Medium.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Arita-sans-SemiBold';
+    src: url('/static/font/Arita/sans/AritaSans-SemiBold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Arita-sans-Thin';
+    src: url('/static/font/Arita/sans/AritaSans-Thin.otf') format('opentype');
+}
+
+
+@font-face {
+    font-family: 'Arita-dodum-Thin';
+    src: url('/static/font/Arita/dodum/Arita-dodum-Thin.otf') format('opentype');
+    src: url('/static/font/Arita/dodum/Arita-dodum-Thin.ttf');
+}
+@font-face {
+    font-family: 'Arita-dodum-Light';
+    src: url('/static/font/Arita/dodum/Arita-dodum-Light.otf') format('opentype');
+    src: url('/static/font/Arita/dodum/Arita-dodum-Light.ttf');
+}
+@font-face {
+    font-family: 'Arita-dodum-Medium';
+    src: url('/static/font/Arita/dodum/Arita-dodum-Medium.otf') format('opentype');
+    src: url('/static/font/Arita/dodum/Arita-dodum-Medium.ttf');
+}
+@font-face {
+    font-family: 'Arita-dodum-SemiBold';
+    src: url('/static/font/Arita/dodum/Arita-dodum-SemiBold.otf') format('opentype');
+    src: url('/static/font/Arita/dodum/Arita-dodum-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'Arita-dodum-Bold';
+    src: url('/static/font/Arita/dodum/Arita-dodum-Bold.otf') format('opentype');
+    src: url('/static/font/Arita/dodum/Arita-dodum-Bold.ttf');
+}

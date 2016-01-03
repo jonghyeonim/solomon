@@ -1,0 +1,29 @@
+.body-container {
+    background: #fff !important;
+}
+.notice-item {
+    cursor: pointer;
+    margin: 0 20px;
+}
+.notice-item .notice-title {
+    color: #fff;
+    text-align: left;
+    background: #413528;
+    width: 100%;
+    padding: 15px;
+    border-bottom: 1px solid #f7f7f7;
+}
+.notice-item .notice-content {
+    display: none;
+    text-align: left;
+    background: #f7f7f7 !important;
+    color: #333;
+    padding: 15px;
+}
+.notice-item .notice-content ul {
+    padding-left: 0;
+}
+.ajax-loader {
+    width: 5%;
+    margin-bottom: 40px;
+}

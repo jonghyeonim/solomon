@@ -1,0 +1,231 @@
+body {
+    font-family: 'NanumBarunGothicWeb';
+}
+.body-container {
+    padding: 181px 0;
+    background: #F4F4F4 !important;
+}
+
+/* navbar */
+.navbar {
+    border: none !important;
+}
+.navbar-default, #navbar, .gq-navbar-menu {
+    background: #413528 !important;
+    color: #fff !important;
+}
+.navbar-brand>img {
+    margin-top: 10px;
+    width: 27%;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff !important;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    background: #ec823e;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    background: #ec823e;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    background: #ec823e;
+}
+.dropdown-menu>li>a:hover {
+    background: #79634A;
+    color: #fff;
+}
+
+/* footer */
+.footer-container {
+    background: #121212 !important;
+    color: #ABA7A7 !important;
+    padding: 10px 0;
+    font-size: 11px;
+    color: #327131 !important;
+}
+
+.bg-dark-alfa-50:before,
+.bg-dark-alfa-50 .YTPOverlay:before{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(34,34,34, .5);
+}
+
+
+
+
+/* mobile */
+@media only screen and (max-width: 600px){
+    .body-container {
+        padding-top: 50px;
+        padding-bottom: 0px;
+    }
+    .navbar-brand>img {
+        margin-top: 0px;
+        width: 70% !important;
+    }
+    .navbar-default, #navbar, .gq-navbar-menu {
+        background: #f1f1f1 !important;
+    }
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+        background: #f1f1f1 !important;
+    }
+    .navbar-default .navbar-toggle {
+        border: none
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #413528;
+    }
+    .navbar-default .navbar-nav>li>a {
+        color: #f1f1f1 !important;
+    }
+    .nav>li {
+        background: #665b4e;
+        border-bottom: 1px solid rgba(80, 67, 67, 0.47);
+    }
+    #navbar {
+        background: #665b4e !important;
+    }
+    .navbar-nav {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .navbar-nav>li>a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .navbar-nav .open .dropdown-menu {
+        background: #f1f1f1;
+    }
+    .navbar-nav .open .dropdown-menu li {
+        border-bottom: 1px solid #a1a1a1;
+    }
+    .navbar-nav .open .dropdown-menu li:last-child {
+        border-bottom: none !important;
+    }
+    .navbar-nav .open .dropdown-menu li a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .text-center {
+        font-size: 10px;
+        color: #808080;
+    }
+    .text-center div {
+        font-size: 9px;
+        color: #AFAFAF;
+        margin-top: 5px;
+    }
+
+    /* common element node */
+    .gapu-container {
+        background: #fff;
+        padding: 10px !important;
+        width: 100% !important;
+    }
+    .gapu-container .gapu-title {
+        font-size: 20px !important;
+        border-bottom: 2px solid #6B5747;
+        padding-bottom: 5px !important;
+        padding-top: 15px !important;
+        color: #2f2f2f;
+    }
+    .gapu-container .gapu-content {
+        text-align: center;
+        margin: 40px auto 40px auto !important;
+        width: 100% !important;
+    }
+}
+
+/* tablet */
+@media only screen and (max-width: 768px){
+    .body-container {
+        padding: 50px 0;
+        background: #fff !important;
+    }
+    .navbar-brand>img {
+        margin-top: 0px;
+        width: 35%;
+    }
+    .gapu-container {
+        background: #fff;
+        padding: 40px !important;
+        width: 100% !important;
+    }
+    .gapu-container .gapu-content {
+        text-align: center;
+        margin: 40px auto 40px auto !important;
+        width: 100% !important;
+    }
+}
+
+/* web */
+@media only screen and (min-width: 769px) {
+    /* navbar */
+    .gq-navbar-menu > li {
+        padding:0 !important;
+        border-right: 1px solid rgba(82, 71, 59, 0.72);
+    }
+    .gq-navbar-menu > li:last-child {
+        border: none !important;
+    }
+    .gq-navbar-menu > li, .gq-navbar-menu > li > a, .navbar-brand {
+        height: 80px;
+        line-height: 80px;
+        vertical-align: middle;
+    }
+    .navbar-nav>li>.dropdown-menu {
+        margin-left: -1px;
+    }
+    .gq-navbar-menu > li > a {
+        padding: 0px 17px 0px 17px !important;
+    }
+
+    /* footer */
+    .footer-container .footer-text {
+        padding-left: 4em;
+    }
+}
+
+
+
+/* common element node */
+.gapu-container {
+    background: #fff;
+    padding: 50px;
+}
+.gapu-container .gapu-title {
+    font-size: 30px;
+    border-bottom: 2px solid #6B5747;
+    padding-bottom: 10px;
+    color: #2f2f2f;
+}
+.gapu-container .gapu-content {
+    text-align: center;
+    margin: 60px auto 30px auto;
+    width: 60%;
+}
+ul {
+    list-style: none !important;
+}
+
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript,
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(/static/img/loader_2.gif) center no-repeat #fff;
+}

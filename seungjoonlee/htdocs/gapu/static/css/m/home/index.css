@@ -1,0 +1,64 @@
+.body-container {
+    padding-top: 50px;
+    padding-bottom: 0px;
+}
+.gapu-m-section {
+    text-align: center;
+    padding: 80px 0;
+}
+.gapu-m-section .title, .gapu-m-section .content {
+    color: #fff;
+}
+.m-section-4 .title, .m-section-4 .content, .m-section-7 .title, .m-section-7 .content {
+    color: #79634b;
+}
+.gapu-m-section:hover {
+    cursor: pointer;
+}
+.gapu-m-section .title {
+    font-size: 31px;
+}
+.gapu-m-section .content {
+}
+
+/* section1 */
+.m-section-1 {
+    background: url('/GAPU/static/img/m/main_1.png') no-repeat;
+    background-size: cover;
+}
+/* section 2 */
+.m-section-2 {
+    background: url('/GAPU/static/img/m/main_2.png') no-repeat;
+    background-size: cover;
+}
+/* section 3 */
+.m-section-3 {
+    background: url('/GAPU/static/img/m/main_3.png') no-repeat;
+    background-size: cover;
+}
+/* section 4 */
+.m-section-4 {
+    background: url('/GAPU/static/img/m/main_4.png') no-repeat;
+    background-size: cover;
+
+}
+/* section 5 */
+.m-section-5 {
+    background: url('/GAPU/static/img/m/main_5.png') no-repeat;
+    background-size: cover;
+}
+/* section 6 */
+.m-section-6 {
+    background: url('/GAPU/static/img/m/main_2.png') no-repeat;
+    background-size: cover;
+}
+/* section 7 */
+.m-section-7 {
+    background: url('/GAPU/static/img/m/main_4.png') no-repeat;
+    background-size: cover;
+}
+/* section 8 */
+.m-section-8 {
+    background: url('/GAPU/static/img/m/main_6.png') no-repeat;
+    background-size: cover;
+}
